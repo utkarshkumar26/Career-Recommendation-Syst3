@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fffde7; /* Light yellow color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        .navbar {
+            background-color: #343a40; /* Dark background for the navbar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        }
+
+        .navbar .navbar-brand {
+            color: #fff;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ff7e5f; /* Highlight color on hover */
+        }
+
+        .main-content {
+            flex: 1; /* This makes the main-content take the available space */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+            max-width: 800px; /* Limit the maximum width */
+            width: 100%; /* Ensure the container takes full width up to max-width */
+            margin: 20px; /* Add margin for responsiveness */
+        }
+
+        footer {
+            background-color: #f1f1f1; /* Light gray background for footer */
+            padding: 10px 0; /* Reduced padding for a shorter footer */
+            text-align: center; /* Center the text */
+            width: 100%; /* Full width for the footer */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for the footer */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">UK Recommendation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="content-container">
+            <h1>Top Recommended Studies with Probabilities</h1>
+            <ul class="list-group mt-3">
+                {% for recommendation in recommendations %}
+                    <li class="list-group-item">
+                        <b>{{ recommendation[0] }}</b> with probability <b>{{ recommendation[1] }}</b>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 UK Recommendation. All Rights Reserved.</p>
+            <p>Contact Us:
+                <a href="mailto:Utkarshtiwari20020@gmail.com">utkarshtiwari20020@gmail.com</a> |
+                Phone: <a href="tel:8789446425">+91 8789446425</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
