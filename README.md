@@ -24,7 +24,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/utkarshkumar26/Career-Recommendation-Syst3https://github.com/yourusername/mcq-generator.git
+git clone https://github.com/utkarshkumar26/Career-Recommendation-Syst3https://github.com/utkarshkumar26/mcq-generator.git
 cd mcq-generator
 Install Dependencies:
 
